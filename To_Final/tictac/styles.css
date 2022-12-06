@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 500%;
+    text-align: center;
+    font-weight: bold;
+    margin: auto;
+    color: #ff1178;
+}
+
+#gameText  {
+    font-size: 250%;
+    text-align: center;
+    font-weight: bold;
+    margin: auto;
+    color :yellow;
+}
+
+:root {
+    --winning-square: rgb(31, 31, 31);
+    --xobuttons: #01fff4;
+}
+
+body {
+    padding: 10px;
+    background: rgb(15, 15, 15);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button {
+    cursor: pointer;
+    text-align:center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ff1178;
+    color: yellow;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
+    font-size: 170%;
+    font-weight: bold;
+    width: 150px;
+    height:40px;
+}
+
+button:hover{
+    color:#ff1178;
+    background: yellow;
+}
+
+/*grid for game*/
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    height: 550px;
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#gridgame {
+    position: absolute;
+    align-items: center;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.square {
+    height: 170px;
+    width: 170px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 160px;
+    color:#01fff4;
+    border: 3px solid;
+    cursor: pointer;
+}
+
+.square:hover{
+    background:rgb(31, 31, 31);
+}
+
+.square:nth-child(-n+3) {
+    border-top: none;
+}
+
+.square:nth-child(3n+1) {
+    border-left: none;
+}
+
+.square:nth-child(3n+3) {
+    border-right: none;
+}
+
+.square:nth-last-of-type(-n+3) {
+    border-bottom: none;
+}
+
+@media only screen and (max-width:600px){
+    h1 {
+        font-size: 400%;
+        text-align: center;
+        font-weight: bold;
+        margin: auto;
+        color: #ff1178;
+    }
+
+    #gameText  {
+        font-size: 180%;
+        text-align: center;
+        font-weight: bold;
+        margin: auto;
+        color :yellow;
+    }
+
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        height: 550px;
+        width:100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+/* game announcement*/
+
